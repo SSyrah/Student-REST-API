@@ -9,7 +9,7 @@ sendData = () => {
     let classname = document.querySelector('#classname');
 
     let xhr = new XMLHttpRequest();
-    let url = "http://localhost:8900/students";
+    let url = "/students";
 
     xhr.open("POST", url,true);
 

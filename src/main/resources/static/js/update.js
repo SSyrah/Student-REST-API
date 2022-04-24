@@ -5,7 +5,7 @@ const aSyncFunction = async () => {
     console.log("Inside async");
 
     const response = await fetch(
-        'http://localhost:8900/students'
+        '/students'
     );
     console.log("response", response);
 
@@ -42,7 +42,7 @@ const aSyncFunction = async () => {
 
 const aFunc = async (value) => {
     console.log("Inside async");
-    const response = await fetch ('http://localhost:8900/students/'+ value);
+    const response = await fetch ('/students/'+ value);
     console.log("Response:", response);
     const data = await response.json();
     console.log("Data:",data);
@@ -78,7 +78,7 @@ saveData = ()  =>{
     let classname = document.querySelector('#classname');
 
     let xhr = new XMLHttpRequest();
-    let url = "http://localhost:8900/students/" + id;
+    let url = "/students/" + id;
 
     xhr.open('PUT',url,true);
     xhr.setRequestHeader('Content-Type', 'application/json');

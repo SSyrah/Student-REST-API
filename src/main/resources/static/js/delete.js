@@ -5,7 +5,7 @@ const aSyncFunction = async () => {
     console.log("Inside async");
 
     const response = await fetch(
-        'http://localhost:8900/students'
+        '/students'
     );
     console.log("response", response);
 
@@ -47,7 +47,7 @@ deleteStudent = () => {
     let value = Number(deleteStudent.value);
     console.log("StudentID", value);
     let xhr = new XMLHttpRequest();
-    let url = 'http://localhost:8900/students/' + value;
+    let url = '/students/' + value;
     console.log("Url:", url);
     xhr.open("DELETE", url, true);
     xhr.onreadystatechange = function() {

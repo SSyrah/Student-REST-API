@@ -5,7 +5,7 @@ const aSyncFunction = async (students) => {
     console.log("Inside async");
 
     const response = await fetch(
-        'http://localhost:8900/students'
+        '/students'
     );
     console.log("response", response);
 
