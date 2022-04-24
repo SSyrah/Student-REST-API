@@ -14,7 +14,7 @@ import javax.validation.constraints.PositiveOrZero;
 
 @Entity
 @Data
-@NoArgsConstructor
+//@NoArgsConstructor
 @AllArgsConstructor
 @Builder
 public class Students {
@@ -36,4 +36,10 @@ public class Students {
     @PositiveOrZero
     private Long studentPoints;
 
+    public Students() {
+        studentAddress = "--";
+        studentPoints = 0L;
+        coursesAccomplished = 0L;
+        className = "--";
+    }
 }

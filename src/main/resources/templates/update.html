@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Student Rest-API</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+    <div class="container-fluid">
+        <form class="navbar-brand" method="get" action="/">Tervetuloa</form>
+        <ul class="navbar-nav me-auto my-2">
+            <li class="nav-item">
+                <form class="nav-link" method="get" action="/list">
+                    <button>List Students</button>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form class="nav-link" method="get" action="/add">
+                    <button>Add Student</button>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form class="nav-link" method="get" action="/delete">
+                    <button>Delete Student</button>
+                </form>
+            </li>
+            <li class="nav-item">
+                <form class="nav-link" method="get" action="/update">
+                    <button>Update Student</button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div id="CurrentDate"></div>
+<br/>
+<br/>
+<body>
+<h1 style="text-align: center">Student API</h1>
+<br><br><br>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <form method="get" action="/">
+                <button>Front Page</button>
+            </form>
+            <br><br>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <button id="updatebutton" type="button">Fetch Students</button>
+            <br>
+            <h2>Update Student by Id:</h2>
+            <p>
+                <input type="number" id="updateStudent" placeholder="Enter Student's ID here">
+            </p>
+            <button onclick="fetchStudent()">Fetch Student</button>
+            <p class="result" style="color: white"></p>
+            <br><br>
+            <p>
+                <input type="text" id="firstname" placeholder="First name">
+                <br>
+                <input type="text" id="lastname"  placeholder="Last name">
+                <br>
+                <input type="text" id="address" placeholder="Address">
+                <br>
+                <input type="number" id="courses" placeholder="Courses">
+                <br>
+                <input type="number" id="points" placeholder="Student Points">
+                <br>
+                <input type="text" id="classname" placeholder="Class name">
+            </p>
+            <button onclick="saveData()">Save Student</button>
+            <br>
+            <p class="result" style="color:green"></p>
+            <table class="table table-dark table-bordered table-hover" style="text-align:center">
+                <thead>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Courses Accomplished</th>
+                <th scope="col">Student Points
+                <th scope="col">Class name</th>
+                </thead>
+                <tbody id="tablebody"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="js/index.js"></script>
+<script src="js/update.js"></script>
+</body>
+</html>

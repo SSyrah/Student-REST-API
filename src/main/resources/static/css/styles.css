@@ -1,0 +1,19 @@
+body {
+    background-image: url("../images/coffee.jpg");
+    background-position: center;
+    background-size: 100% auto;
+    color:white;
+}
+
+.navbar {
+    background-color: black;
+    color: white;
+}
+
+#CurrentDate {
+    color: white;
+}
+
+h1 {
+    color: white;
+}
